@@ -1,0 +1,12 @@
+{
+  "name": "emaily",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/dotexe0/emaily.git",
+  "author": "Daniel Varela <dotexe0@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^3.5.0",
+    "rimraf": "^2.6.2"
+  }
+}
