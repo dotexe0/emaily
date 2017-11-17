@@ -2,10 +2,6 @@
   "name": "emaily",
   "version": "1.0.0",
   "main": "index.js",
-  "engines": {
-    "node": "8.8.1",
-    "yarn": "1.2.1"
-  },
   "repository": "https://github.com/dotexe0/emaily.git",
   "author": "Daniel Varela <dotexe0@gmail.com>",
   "license": "MIT",
