@@ -1,6 +1,12 @@
 import express from 'express';
+import mongoose from 'mongoose';
+
 import './services/passport';
 import router from './routes/googleOAuthRoutes';
+import keys from './config/keys';
+
+// connect server to mongoDB
+mongoose.connect(keys.mongoURI);
 
 const app = express();
 
