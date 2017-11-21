@@ -12,6 +12,7 @@ import './models/User';
 import './services/passport'; // google passport strategy
 
 // connect server to mongoDB
+mongoose.promise = global.Promise;
 mongoose.connect(keys.mongoURI, { useMongoClient: true });
 
 const app = express();
@@ -25,14 +26,13 @@ app.use(
     maxAge: 30 * 24 * 60 * 60 * 1000, // cookie will last for 30 days
     keys: [keys.cookieKey] // can enter multiple cookie keys and will choose randomly
   })
-)
+);
 
 app.use(passport.initialize());
 app.use(passport.session());
 
 app.use('/auth', googleRouter);
 app.use('/api', userRouter);
-
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}.`));
