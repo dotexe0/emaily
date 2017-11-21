@@ -7,10 +7,12 @@ import keys from '../config/keys';
 
 const User = mongoose.model('users'); //model class
 
+// for initial login attempt
 passport.serializeUser((user, done) => {
   // user.id is the user id from mongodb
   done(null, user.id);
 });
+
 
 passport.deserializeUser((id, done) => {
   User.findById(id).then(user => {

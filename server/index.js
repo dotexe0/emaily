@@ -12,7 +12,7 @@ import './models/User';
 import './services/passport'; // google passport strategy
 
 // connect server to mongoDB
-mongoose.connect(keys.mongoURI);
+mongoose.connect(keys.mongoURI, { useMongoClient: true });
 
 const app = express();
 
