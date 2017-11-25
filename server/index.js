@@ -1,12 +1,13 @@
-import express from 'express';
+import express, { Router } from 'express';
 import mongoose from 'mongoose';
 import cookieSession from 'cookie-session';
 import passport from 'passport';
 import bodyParser from 'body-parser';
+import keys from './config/keys';
+
 
 import googleRouter from './routes/googleOAuthRoutes';
 import userRouter from './routes/userRoutes';
-import keys from './config/keys';
 
 import './models/User';
 import './services/passport'; // google passport strategy
@@ -33,6 +34,5 @@ app.use(passport.session());
 
 app.use('/auth', googleRouter);
 app.use('/api', userRouter);
-
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}.`));

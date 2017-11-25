@@ -1,4 +1,4 @@
 {
-    "presets": ["env", "stage-3", "airbnb"]
+    "presets": ["env", "stage-0", "airbnb"]
     // "presets": ["es2015", "stage-0"] old
 }
