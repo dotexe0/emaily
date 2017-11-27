@@ -14,7 +14,10 @@ googleRouter.get(
 // 'code' has been sent through /auth/google endpoint and now we have a user profile
 googleRouter.get(
   '/google/callback',
-  passport.authenticate('google')
+  passport.authenticate('google'),
+  (req, res) => {
+    res.redirect('/surveys');
+  }
 );
 
 export default googleRouter;

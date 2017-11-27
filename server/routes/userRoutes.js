@@ -11,7 +11,7 @@ userRouter.get('/current_user', (req, res) => {
 // logout user
 userRouter.get('/logout', (req, res) => {
     req.logout();
-    res.send(req.user);
+    res.redirect('/');
 })
 
 export default userRouter;
