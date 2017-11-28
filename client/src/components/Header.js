@@ -9,12 +9,11 @@ class Header extends Component {
   // shouldComponentUpdate() {
   //   return true;
   // }
-  _handleLogout() {
-     this.props.logoutUser();
-     history.push("/");
+  // _handleLogout() {
+    //  this.props.logoutUser();
+    //  history.push("/");
     //  this.setState({state: this.state});
-    this.forceUpdate();
-  }
+  // }
 
   renderContent() {
     switch (this.props.auth) {
@@ -23,7 +22,8 @@ class Header extends Component {
       case false:
         return (<li><a href="/auth/google">Login with Google</a></li>);
       default:
-        return (<li><a onClick={() => this._handleLogout() }>Logout</a></li>);
+        return (<li><a href="/api/logout">Logout</a></li>);
+        // return (<li><a onClick={() => this._handleLogout() }>Logout</a></li>);
     }
   }
 
