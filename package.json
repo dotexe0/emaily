@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "engines": {
-    "node": "8.8.1",
+    "node": "8.9.1",
     "yarn": "1.3.2"
   },
   "repository": "https://github.com/dotexe0/emaily.git",
